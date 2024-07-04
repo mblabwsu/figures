@@ -2,6 +2,8 @@
 Example code to make figures for publications
 
 To make publication quality figures in matplotlib takes a bit of work, but is well worth the effort. 
+The basic idea is to customize matplotlib parameters to have spacings and fontsizes suitable for a single (3.5") or double (7") column figure. 
+This is shown below. 
 
 ```
 import pandas as pd
@@ -64,5 +66,11 @@ for k,v in settings.items():
 # Set2, rainbow, seismic, tab10, tab20, tab20c
 sns.set_palette('deep')
 
+```
+
+
+Once these parameters are set up, create a figure.  In this example there are two plots in columns, and the figure size is 3.5"
+```
+fig, ax = plt.subplots(2,1,figsize(3.5,3));
 ```
 
